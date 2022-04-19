@@ -3,7 +3,7 @@ const scraper = require('./scrapper/handler');
 
 const init = async () => {
   const server = hapi.server({
-    port: 3000,
+    port: 5000,
     host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
     routes: {
       cors: {
