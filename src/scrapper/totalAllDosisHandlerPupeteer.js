@@ -3,7 +3,10 @@
 const puppeteer = require('puppeteer');
 
 async function getDataTotal() {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox'],
+  });
   const page = await browser.newPage();
   await page.goto('http://victori.semarangkota.go.id/dashboardNew', { waitUntil: 'networkidle0' });
   const totalPelayananVaksinasi = await page.$eval('span[id="total_penerima_vaksin"]', (el) => el.innerText);
