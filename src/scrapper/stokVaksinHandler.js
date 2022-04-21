@@ -16,13 +16,25 @@ async function getData() {
       return true;
     }
     const tds = $(element).find('td');
-    const row = {};
+    let faskes;
+    const data = [];
     $(tds).each((i, element) => {
-      row[tableHeaders[i]] = $(element).text();
+      if (i > 0) {
+        if (tableHeaders[i] === 'faskes') {
+          faskes = $(element).text();
+        } else {
+          const name = tableHeaders[i];
+          const qty = $(element).text();
+          const s1 = { name, qty };
+          data.push(s1);
+        }
+      }
     });
+    const row = { faskes, data };
     scrapedData.push(row);
   });
-  console.log(scrapedData);
+  scrapedData.shift();
+  console.log(scrapedData[0]);
   return scrapedData;
 }
 

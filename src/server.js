@@ -1,5 +1,5 @@
 const hapi = require('@hapi/hapi');
-const scraper = require('./scrapper/handler');
+const routes = require('./routes');
 
 const init = async () => {
   const server = hapi.server({
@@ -12,13 +12,7 @@ const init = async () => {
     },
   });
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => (
-      scraper.getData()
-    ),
-  });
+  server.route(routes);
 
   await server.start();
   console.log(`Server berjalan di ${server.info.uri}`);
