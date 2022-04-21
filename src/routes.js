@@ -11,7 +11,7 @@ const routes = [
   },
   {
     method: 'GET',
-    path: '/vaksin/total',
+    path: '/vaksin',
     handler: (request, h) => (
       scraperTotalAllDosis.getDataTotal()
     ),
