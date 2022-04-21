@@ -22,7 +22,10 @@ async function getDataTotal() {
 }
 
 async function getDataDosis1Total() {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox'],
+  });
   const page = await browser.newPage();
   await page.goto('http://victori.semarangkota.go.id/dashboardNew', { waitUntil: 'networkidle0' });
   const totalPelayananVaksinasiDosis1 = await page.$eval('span[id="penerima_vaksin"]', (el) => el.innerText);
@@ -38,7 +41,10 @@ async function getDataDosis1Total() {
 }
 
 async function getDataDosis1HariIni() {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox'],
+  });
   const page = await browser.newPage();
   await page.goto('http://victori.semarangkota.go.id/dashboardNew', { waitUntil: 'networkidle0' });
   const hariIniPelayananVaksinasiDosis1 = await page.$eval('span[id="penerima_vaksin_hariini"]', (el) => el.innerText);
@@ -54,7 +60,10 @@ async function getDataDosis1HariIni() {
 }
 
 async function getDataDosis2Total() {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox'],
+  });
   const page = await browser.newPage();
   await page.goto('http://victori.semarangkota.go.id/dashboardNew', { waitUntil: 'networkidle0' });
   const totalPelayananVaksinasiDosis2 = await page.$eval('span[id="penerima_vaksin_2"]', (el) => el.innerText);
@@ -70,7 +79,10 @@ async function getDataDosis2Total() {
 }
 
 async function getDataDosis2HariIni() {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox'],
+  });
   const page = await browser.newPage();
   await page.goto('http://victori.semarangkota.go.id/dashboardNew', { waitUntil: 'networkidle0' });
   const hariIniPelayananVaksinasiDosis2 = await page.$eval('span[id="penerima_vaksin_kedua_hariini"]', (el) => el.innerText);
@@ -86,7 +98,10 @@ async function getDataDosis2HariIni() {
 }
 
 async function getDataDosis3Total() {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox'],
+  });
   const page = await browser.newPage();
   await page.goto('http://victori.semarangkota.go.id/dashboardNew', { waitUntil: 'networkidle0' });
   const totalPelayananVaksinasiDosis3 = await page.$eval('span[id="penerima_vaksin3"]', (el) => el.innerText);
@@ -102,7 +117,10 @@ async function getDataDosis3Total() {
 }
 
 async function getDataDosis3HariIni() {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox'],
+  });
   const page = await browser.newPage();
   await page.goto('http://victori.semarangkota.go.id/dashboardNew', { waitUntil: 'networkidle0' });
   const hariIniPelayananVaksinasiDosis3 = await page.$eval('span[id="total_penerima_vaksin3hariini"]', (el) => el.innerText);
