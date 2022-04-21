@@ -11,7 +11,6 @@ const init = async () => {
       },
     },
   });
-
   server.route(routes);
 
   await server.start();
