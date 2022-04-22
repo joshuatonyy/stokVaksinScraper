@@ -1,4 +1,4 @@
-Hi, this is a API that works as Semarang City's Vaccination Tracker
+Hi, this is an API that works as Semarang City's Vaccination Tracker
 This API is hosted at: 
 Routes are:
 - /stokvaksin = list of available vaccines types in Semarang's vaccination centers
