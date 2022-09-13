@@ -14,6 +14,7 @@ Routes are:
 - /vaksin/dosis3/hariini = shows tracking of 3rd dose vaccination done today in Semarang
 
 **Because the data loads late at the sites I have to use puppeteer and wait the data to fully loaded, so expect a bit of delay in /vaksin and its subdomains**
+**LOGS: I just found an internal server error sometimes for the /vaksin routes. For now, I suspect that this is a problem from the hosting part with Puppeteer.**
 
 
 These data are scraped from the Semarang Vaccination Website : http://victori.semarangkota.go.id/
